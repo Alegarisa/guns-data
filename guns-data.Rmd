@@ -1,0 +1,35 @@
+---
+title: "guns-data"
+author: "Alejandra Garcia Isaza"
+date: "October 20, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(rio)
+library(here)
+
+here
+
+gundata <- import(here("data", "full_data.csv"))
+
+# View(gundata)
+
+```
+
+
+
+```{r}
+ggplot(gundata, aes(x = "race", y = "intent")) + 
+  geom_point()
+
+```
+
+
+```{r}
+
+```
+
